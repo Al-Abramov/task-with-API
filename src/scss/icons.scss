@@ -1,0 +1,49 @@
+.icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  &_ml-16 {
+    margin-left: 16px;
+  }
+
+  &_home {
+    background-image: url('../assets/icons/svg/Home.svg');
+  }
+
+  &_market {
+    background-image: url('../assets/icons/svg/Market.svg');
+  }
+
+  &_search {
+    background-image: url('../assets/icons/svg/Search.svg');
+  }
+
+  &_settings {
+    background-image: url('../assets/icons/svg/Settings.svg');
+  }
+
+  &_chat {
+    background-image: url('../assets/icons/svg/Chat.svg');
+  }
+
+  &_exit {
+    background-image: url('../assets/icons/svg/Exit.svg');
+  }
+
+  &_delete {
+    background-image: url('../assets/icons/svg/Delete.svg');
+  }
+
+  &_rotate {
+    background-image: url('../assets/icons/svg/Rotation.svg');
+  }
+
+  &_link {
+    background-image: url('../assets/icons/svg/Linked.svg');
+  }
+
+  &_edit {
+    background-image: url('../assets/icons/svg/Edit.svg');
+  }
+}

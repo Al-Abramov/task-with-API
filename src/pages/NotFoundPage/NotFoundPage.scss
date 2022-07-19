@@ -1,0 +1,13 @@
+.not-found {
+  height: 100%;
+
+  &__title {
+    align-items: center;
+    font-size: 52px;
+
+    &_big {
+      font-size: 84px;
+      font-weight: 700;
+    }
+  }
+}

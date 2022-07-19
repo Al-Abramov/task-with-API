@@ -1,4 +1,4 @@
-import { INavItems } from '../Header/constants/navItems.interface';
+import { INavItems } from '../../constants/navItems/navItems.interface';
 
 export interface NavigationProps {
   navInfo: INavItems[];

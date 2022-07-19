@@ -1,7 +1,13 @@
+import { CompanyPageHeader } from './components/CompanyPageHeader';
+import { Company } from './components/Company';
+import './CompanyPage.scss';
+import '../../scss/icons.scss';
+
 export const CompanyPage = () => {
   return (
-    <div>
-      <h2>Page</h2>
-    </div>
+    <section className="company-page">
+      <CompanyPageHeader />
+      <Company />
+    </section>
   );
 };

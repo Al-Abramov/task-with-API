@@ -1,0 +1,34 @@
+@use '../../../../scss/variables.scss' as *;
+@use '../../../../scss/mixins.scss' as *;
+
+.company-page {
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 26px 40px;
+    border-bottom: 1px solid $border;
+  }
+
+  &__header-link {
+    display: flex;
+    @include text (16px, 600, $menu-bg);
+    cursor: pointer;
+
+    &::before {
+      content: url('../../../../assets/icons/svg/arrow.svg');
+      margin-right: 16px;
+    }
+  }
+
+  &__header-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+}

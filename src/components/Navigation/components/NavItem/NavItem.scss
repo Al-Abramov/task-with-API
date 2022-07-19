@@ -15,29 +15,5 @@
     &_active {
       background-color: $active-link;
     }
-
-    &_home {
-      background-image: url('../../../../assets/icons/svg/Home.svg');
-    }
-
-    &_market {
-      background-image: url('../../../../assets/icons/svg/Market.svg');
-    }
-
-    &_search {
-      background-image: url('../../../../assets/icons/svg/Search.svg');
-    }
-
-    &_settings {
-      background-image: url('../../../../assets/icons/svg/Settings.svg');
-    }
-
-    &_chat {
-      background-image: url('../../../../assets/icons/svg/Chat.svg');
-    }
-
-    &_exit {
-      background-image: url('../../../../assets/icons/svg/Exit.svg');
-    }
   }
 }
