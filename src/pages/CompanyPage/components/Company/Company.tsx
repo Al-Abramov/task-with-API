@@ -1,12 +1,12 @@
-import { CompanyTitle } from './components/CompanyTitle';
-import { CompanyInfo } from './components/CompanyInfo';
-import './Company.scss';
+import { CompanyTitle } from './CompanyTitle';
+import { CompanyInfo } from './CompanyInfo';
 import {
   companyData,
   companyInfo,
   titleData,
   titleInfo,
 } from '../../../../constants/companyInfoConsts';
+import './Company.scss';
 
 export const Company = () => {
   return (

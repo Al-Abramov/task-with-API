@@ -2,6 +2,6 @@ export const companyInfo: string[] = ['Полное название', 'Дого
 
 export const companyData: string[] = ['ФИО', 'Телефон', 'Эл. почта'];
 
-export const titleInfo = 'ОБЩАЯ ИНФОРМАЦИЯ';
+export const titleInfo = 'Общая информация';
 
-export const titleData = 'КОНТАКТНЫЕ ДАННЫЕ';
+export const titleData = 'Контактные данные';

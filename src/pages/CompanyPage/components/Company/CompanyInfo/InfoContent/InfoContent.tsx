@@ -1,7 +1,7 @@
-import './CompanyInfoContent.scss';
-import { ICompanyInfoContent } from './ICompanyInfoContent';
+import { InfoContentProps } from './InfoContentProps.interface';
+import './InfoContent.scss';
 
-export const CompanyInfoContent: React.FC<ICompanyInfoContent> = ({ descriptions }) => {
+export const InfoContent: React.FC<InfoContentProps> = ({ descriptions }) => {
   return (
     <div className="company__info-content">
       <div className="flex-column width-150">
