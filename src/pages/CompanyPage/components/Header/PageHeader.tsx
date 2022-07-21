@@ -7,7 +7,7 @@ export const PageHeader = () => {
   return (
     <header className="company-page__header">
       <div className="company-page__header-link">
-        <span>К СПИСКУ ЮРИДИЧЕСКИХ ЛИЦ</span>
+        <span>К cписку юридических лиц</span>
       </div>
 
       <div className="buttons-container">

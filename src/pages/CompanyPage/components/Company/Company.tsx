@@ -6,6 +6,7 @@ import {
   titleData,
   titleInfo,
 } from '../../../../constants/companyInfoConsts';
+import { CompanyImage } from './CompanyImage';
 import './Company.scss';
 
 export const Company = () => {
@@ -14,6 +15,7 @@ export const Company = () => {
       <CompanyTitle />
       <CompanyInfo descriptions={companyInfo} title={titleInfo} />
       <CompanyInfo descriptions={companyData} title={titleData} />
+      <CompanyImage />
     </div>
   );
 };

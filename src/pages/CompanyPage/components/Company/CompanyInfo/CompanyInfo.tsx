@@ -4,7 +4,7 @@ import { CompanyInfoProps } from './CompanyInfoProps.inteface';
 
 export const CompanyInfo: React.FC<CompanyInfoProps> = ({ descriptions, title }) => {
   return (
-    <section className="company__info-container">
+    <section className="page-container">
       <InfoTitle title={title} />
       <InfoContent descriptions={descriptions} />
     </section>

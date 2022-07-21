@@ -1,6 +1,7 @@
 .icon {
   width: 20px;
   height: 20px;
+  background-size: cover;
   cursor: pointer;
 
   &_ml-16 {
@@ -45,5 +46,13 @@
 
   &_edit {
     background-image: url('../assets/icons/svg/Edit.svg');
+  }
+
+  &_remove {
+    background-image: url('../assets/icons/svg/x.svg');
+  }
+
+  &_add {
+    background-image: url('../assets/icons/svg/Add.svg');
   }
 }

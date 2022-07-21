@@ -13,6 +13,7 @@
   &__header-link {
     display: flex;
     @include text (16px, 600, $menu-bg);
+    text-transform: uppercase;
     cursor: pointer;
 
     &::before {
