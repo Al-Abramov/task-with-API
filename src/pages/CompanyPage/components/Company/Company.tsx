@@ -1,3 +1,4 @@
+import './Company.scss';
 import { CompanyTitle } from './CompanyTitle';
 import { CompanyInfo } from './CompanyInfo';
 import {
@@ -7,7 +8,6 @@ import {
   titleInfo,
 } from '../../../../constants/companyInfoConsts';
 import { CompanyImage } from './CompanyImage';
-import './Company.scss';
 
 export const Company = () => {
   return (

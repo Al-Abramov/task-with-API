@@ -1,4 +1,5 @@
 import axios, { AxiosRequestConfig } from 'axios';
+import { getCookie } from '../utils/cookie';
 
 const baseURL = 'http://135.181.35.61:2112/';
 
@@ -10,7 +11,8 @@ api.interceptors.request.use((config: AxiosRequestConfig) => {
   if (!config.headers) {
     config.headers = {};
   }
-  config.headers.Authorization = `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWxleCIsImlhdCI6MTY1ODQxMDg1OCwiZXhwIjoxNjU5MDE1NjU4fQ.hGRe9fvAzfIHRjR-g2IBBwq0JsL9LqkJEIfK9hCDqWY`;
+  const token = getCookie('token');
+  config.headers.Authorization = token ? token : '';
   return config;
 });
 

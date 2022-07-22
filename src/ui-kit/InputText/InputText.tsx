@@ -5,7 +5,7 @@ export const InputText: React.FC<InputTextProps> = ({ value, label, register }) 
   return (
     <>
       <label className="flex-column" htmlFor="text">
-        <span>{label}:</span>
+        <span>{label}</span>
         <input className="input" type="text" {...register} defaultValue={value} id="text" />
       </label>
     </>

@@ -1,37 +1,30 @@
-import { useEffect, useState } from 'react';
-import { Modal } from '../../components/Modals/Overlay';
-import { RegistrationModal } from '../../components/Modals/Registration';
-import { Portal } from '../../components/Portal/Portal';
-import { getCompanyData } from '../../service/dataCompany';
-import { MainButton } from '../../ui-kit/MainButton';
 import './HomePage.scss';
+import { Modal } from '../../components/Modals/Modal';
+import { Registration } from '../../components/Modals/Registration';
+import { useModal } from '../../hooks/useModal';
+import { MainButton } from '../../ui-kit/MainButton';
+import { getCookie } from '../../utils/cookie';
+import { UserName } from './UserName';
 
 export const HomePage = () => {
-  const [modal, setModal] = useState(false);
+  const [isOpen, toggleModal] = useModal();
+  const name = localStorage.getItem('name') as string;
+  const token = getCookie('token');
 
-  const toggleModal = () => {
-    setModal(!modal);
-  };
-
-  useEffect(() => {
-    /*getCompanyData('12')
-      .then((data) => console.log(data))
-      .catch((e) => {
-        alert(e.response.data.error);
-      });*/
-  }, []);
   return (
     <section className="home-page flex-column flex-center">
       <div className="home-page__title-container">
         <h1>Welcome page</h1>
       </div>
-      <MainButton text={'Регистрация'} icon={''} callback={toggleModal} />
-      {modal && (
-        <Portal>
-          <Modal>
-            <RegistrationModal />
-          </Modal>
-        </Portal>
+      {token ? (
+        <UserName name={name} />
+      ) : (
+        <MainButton text={'Регистрация'} icon={''} callback={toggleModal} />
+      )}
+      {isOpen && (
+        <Modal close={toggleModal}>
+          <Registration close={toggleModal} />
+        </Modal>
       )}
     </section>
   );
