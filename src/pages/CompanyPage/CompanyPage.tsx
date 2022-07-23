@@ -1,13 +1,21 @@
 import './CompanyPage.scss';
-import '../../scss/icons.scss';
+import 'scss/icons.scss';
 import { PageHeader } from './components/Header';
 import { Company } from './components/Company';
-import React, { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../../store';
-import { fetchCompanyData } from '../../store/dataReducer';
-import { Loader } from '../../components/Loader';
+import { useEffect } from 'react';
+import { useAppDispatch } from '../../store';
+import { fetchCompanyData, fetchContacts } from 'store/dataReducer';
+import { useParams } from 'react-router-dom';
 
 export const CompanyPage = () => {
+  const dispatch = useAppDispatch();
+  const { id } = useParams();
+
+  useEffect(() => {
+    dispatch(fetchCompanyData(id as string));
+    dispatch(fetchContacts('16'));
+  });
+
   return (
     <section className="company-page">
       <PageHeader />
@@ -15,13 +23,3 @@ export const CompanyPage = () => {
     </section>
   );
 };
-
-/*
-
-    dispatch(fetchCompanyData('12'))
-      .unwrap()
-      .catch((e) => {
-        console.log(e);
-      });
-
-*/

@@ -4,7 +4,7 @@
 .input {
   width: 400px;
   height: 40px;
-  @include text (14px, 400, $gray-text);
+  @include text (14px, 400, $black-text);
   outline: none;
   padding: 0 12px;
   border: 1px solid #CDCDCD;

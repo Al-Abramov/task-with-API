@@ -17,10 +17,12 @@ export interface UpdateCompany {
   shortName: string;
   businessEntity: string;
   contract: IContract;
-  type: string;
+  type: string[];
 }
 
-type IContract = string[];
+export interface IContract {
+  [key: string]: string;
+}
 
 export interface IFotos {
   name: string;
@@ -28,10 +30,4 @@ export interface IFotos {
   thumbpath: string;
 }
 
-export interface UpdateContacts {
-  lastname: string;
-  firstname: string;
-  patronymic: string;
-  phone: string;
-  email: string;
-}
+export type UpdateContacts = Record<string, string>;

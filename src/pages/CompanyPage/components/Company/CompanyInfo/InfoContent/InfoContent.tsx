@@ -1,26 +1,12 @@
 import './InfoContent.scss';
 import { InfoContentProps } from './InfoContentProps.interface';
-import { useAppDispatch, useAppSelector } from '../../../../../../store';
-import React, { useEffect } from 'react';
-import { ICompanyData } from '../../../../../../service/dataCompany/CompanyData.interface';
-import { formattingContract, formattingDate } from '../../../../../../utils/helpers';
-import { translate } from '../../../../../../constants/translate';
-import { fetchCompanyData } from '../../../../../../store/dataReducer';
-import { Loader } from '../../../../../../components/Loader';
+import React from 'react';
+import { createSelector } from '@reduxjs/toolkit';
+import { testEmail } from 'utils/helpers';
 
-export const InfoContent: React.FC<InfoContentProps> = ({ descriptions }) => {
-  const dispatch = useAppDispatch();
-  const loading = useAppSelector((state) => state.data.isLoading);
-
-  const { name, contract, businessEntity, type } = useAppSelector(
-    (state) => state.data.companyData
-  ) as ICompanyData;
-
-  // const info = useTransformData(name, contract, businessEntity, type);
-
+export const InfoContent: React.FC<InfoContentProps> = ({ descriptions, info }) => {
   return (
     <div className="page__info-content">
-      {loading && <Loader />}
       <div className="flex-column width-150">
         {descriptions.map((descr) => (
           <span key={descr} className="page__description">
@@ -30,25 +16,12 @@ export const InfoContent: React.FC<InfoContentProps> = ({ descriptions }) => {
       </div>
 
       <div className="flex-column">
-        {descriptions.map((el) => (
-          <span key={el} className="page__description fw-400">
+        {info.map((el, i) => (
+          <span key={i} className={`page__description fw-400 ${testEmail(el)}`}>
             {el}
           </span>
         ))}
       </div>
     </div>
   );
-};
-
-const useTransformData = (
-  name: string,
-  contract: string[],
-  businessEntity: string,
-  type: string[]
-) => {
-  console.log('contract:', contract);
-  const contr = formattingContract(contract);
-  const typeStr = type.map((el) => translate[el]).join(', ');
-
-  return [name, contr, businessEntity, typeStr];
 };

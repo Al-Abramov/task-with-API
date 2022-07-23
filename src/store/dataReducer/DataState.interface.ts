@@ -3,7 +3,17 @@ import { ICompanyData } from '../../service/dataCompany/CompanyData.interface';
 export interface DataState {
   name: string;
   isLoading: boolean;
-  companyData: ICompanyData | test;
+  companyData: ICompanyData;
+  companyContacts: ICompanyContacts;
 }
 
-type test = [];
+export interface ICompanyContacts {
+  id: string;
+  lastname: string;
+  firstname: string;
+  patronymic: string;
+  phone: string;
+  email: string;
+  createdAt: string;
+  updatedAt: string;
+}

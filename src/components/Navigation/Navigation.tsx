@@ -2,7 +2,6 @@ import { NavItem } from './components/NavItem';
 import { NavigationProps } from './NavigationProps.interface';
 
 export const Navigation: React.FC<NavigationProps> = (props) => {
-  console.log(props.navInfo);
   return (
     <nav className="nav">
       <ul>

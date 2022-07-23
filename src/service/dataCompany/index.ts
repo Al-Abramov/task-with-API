@@ -15,7 +15,8 @@ export async function getCompanyData(id: string) {
 
 export async function updateCompanyData(id: string, obj: Partial<UpdateCompany>) {
   const url = getUrl(id);
-  const response = await api.patch(url, obj);
+
+  const response = await api.patch(url, JSON.stringify(obj));
   return response;
 }
 
@@ -33,6 +34,6 @@ export async function getContacts(id: string) {
 
 export async function udateContacts(id: string, obj: UpdateContacts) {
   const url = `${URL.CONTACTS}/${id}`;
-  const response = await api.patch(url, obj);
+  const response = await api.patch(url, JSON.stringify(obj));
   return response;
 }

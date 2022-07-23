@@ -11,7 +11,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
-        <Route path="page" element={<CompanyPage />} />
+        <Route path="company/:id" element={<CompanyPage />} />
         <Route path="exit" element={<Logout />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>

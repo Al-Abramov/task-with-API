@@ -5,4 +5,6 @@ interface Itranslate {
 export const translate: Itranslate = {
   agent: 'Агент',
   contractor: 'Подрядчик',
+  Подрядчик: 'contractor',
+  Агент: 'agent',
 };

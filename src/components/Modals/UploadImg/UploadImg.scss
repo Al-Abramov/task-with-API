@@ -1,0 +1,20 @@
+.upload {
+
+  &__title {
+    font-size: 20px;
+  }
+
+  &__container {
+    min-height: 100px;
+  }
+
+  &__btns-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    max-width: 120px;
+  }
+}
