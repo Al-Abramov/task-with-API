@@ -1,0 +1,35 @@
+@use '../../../../../../scss/mixins.scss' as *;
+@use '../../../../../../scss/variables.scss' as *;
+
+.foto-content {
+
+  &__image-container {
+    position: relative;
+  }
+
+  &__image {
+    width: 160px;
+    height: 160px;
+  }
+
+  &__image-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-size: cover;
+    padding: 0;
+  }
+
+  &__image-title {
+    @include text(12px, 400, $black-text);
+    line-height: 1.6;
+
+    &_gray {
+      color: $gray-text;
+    }
+  }
+}

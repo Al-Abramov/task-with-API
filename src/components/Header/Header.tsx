@@ -1,5 +1,5 @@
 import { Navigation } from '../Navigation';
-import { navItemsLeft, navItemsRight } from '../../constants/navItems';
+import { navItemsLeft, navItemsRight } from 'constants/navItems';
 import './Header.scss';
 
 export const Header = () => {

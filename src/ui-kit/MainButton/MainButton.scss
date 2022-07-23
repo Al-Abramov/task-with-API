@@ -1,0 +1,56 @@
+@use '../../scss/mixins.scss' as *;
+@use '../../scss/variables.scss' as *;
+
+.main-button {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  max-width: 400px;
+  height: 40px;
+  border: 1px solid #CDCDCD;
+  border-radius: 2px;
+  background-color: transparent;
+  padding: 10px 40px 10px 12px;
+  cursor: pointer;
+
+  &_text {
+    width: 100%;
+    @include text(14px, 600, $menu-bg);
+    text-transform: uppercase;
+  }
+
+  &_disabled {
+    color: $disabled;
+  }
+}
+
+.main-button:hover .main-button_text {
+  color: $hovered-btn;
+  opacity: 0.95;
+  transition: 0.3s;
+}
+
+.main-button:active .icon {
+  color: $pressed-btn;
+  filter: brightness(1.15);
+}
+
+.main-button:hover .icon {
+  color: $hovered-btn;
+  opacity: 0.8;
+}
+
+.main-button:active .main-button_text{
+  color: $pressed-btn;
+  filter: brightness(1.1);
+}
+
+.main-button:hover .main-button_disabled {
+  color: $disabled;
+  opacity: 1;
+}
+
+.main-button:active .main-button_disabled {
+  color: $disabled;
+  filter: brightness(1);
+}

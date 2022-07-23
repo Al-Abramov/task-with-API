@@ -1,0 +1,9 @@
+.foto-content {
+
+  &__images-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 20px 0;
+  }
+}

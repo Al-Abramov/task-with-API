@@ -2,7 +2,7 @@ import { INavItems } from './navItems.interface';
 
 export const navItemsLeft: INavItems[] = [
   { name: 'home', path: '/' },
-  { name: 'market', path: 'page' },
+  { name: 'market', path: 'company/12' },
   { name: 'search', path: 'search' },
 ];
 

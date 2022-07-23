@@ -33,6 +33,19 @@ ul {
   list-style: none;
 }
 
+.page {
+
+  &__title-container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.page-container {
+  padding: 32px 0 32px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;

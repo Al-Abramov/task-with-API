@@ -1,0 +1,13 @@
+.company-page {
+
+  &__header-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+}
