@@ -1,4 +1,4 @@
-import { translate } from 'constants/translate';
+import { translate } from '../constants/translate';
 import { IContract } from '../service/dataCompany/CompanyData.interface';
 import { IFieldObj } from './helpers.interfaces';
 
